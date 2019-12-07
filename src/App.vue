@@ -19,10 +19,10 @@ export default {
   },
   data() {
     return {
-      temperatureReal: 1,
-      temperatureFeel: '-3.2',
-      humidity: 6,
-      wind: 20
+      temperatureReal: -30,
+      temperatureFeel: '-2',
+      humidity: 100,
+      wind: 3.4
     }
   }
 }

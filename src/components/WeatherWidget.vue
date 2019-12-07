@@ -1,5 +1,5 @@
 <template>
-    <div class="informer-container">
+    <div class="informer-container" @click="isClicked = !isClicked" v-bind:class="{ rotated: isClicked }">
 
         <div class="temperature">
             <img src="/img/thermometer.png">
@@ -30,6 +30,11 @@
             temperatureFeel: {type: Number},
             humidity: { type: Number },
             wind: { type: Number }
+        },
+        data() {
+            return {
+                isClicked: false
+            }
         }
     }
 </script>
@@ -47,6 +52,11 @@
         background-position: center center;
         border-radius: 20px;
         box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.75);
+        transition: 2s ease-out;
+    }
+
+    .rotated {
+        transform: rotate(360deg);
     }
 
     .temperature {
@@ -79,7 +89,7 @@
         position: relative;
         box-sizing: border-box;
         padding-right: 15px;
-        margin-left: 20px;
+        margin-left: 60px;
         text-align: right;
         text-shadow: 2px 2px 2px #444;
         font-family: 'Arial', sans-serif;
