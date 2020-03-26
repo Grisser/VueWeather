@@ -20,7 +20,7 @@ export default {
   data() {
     return {
       temperatureReal: -30,
-      temperatureFeel: '-2',
+      temperatureFeel: -2,
       humidity: 100,
       wind: 3.4
     }
